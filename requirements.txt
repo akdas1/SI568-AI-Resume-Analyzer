@@ -1,0 +1,19 @@
+Minimum System Requirements/ Recommendations
+Most requirements will be based on what I use
+
+Mac:
+MacOS Ventura
+CPU: Intel I5 or M1
+Ram: 16GB
+
+Windows:
+Windows 10
+CPU: Intel I5 or AMD Ryzen 5
+Ram: 16GB
+
+Wifi:
+Proper wifi is required to access AI modules
+Please update code to include your key for access
+
+Python:
+Python Version 3.10.0 + preferred
