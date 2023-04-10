@@ -8,7 +8,8 @@ The AI may be computationally heavy, but code comments are illuminating how each
 
 ### Instructions
 
-1. You will be asked to input a question. Please start by asking a question about (containing) McDonald's.
+1. First, input your personal key in the commented line 'openai.api_key ='.
+1. Run the code. You will be asked to input a question. Please start by asking a question about (containing) McDonald's.
 1. If you do not ask about McDonald's, you will be told to ask about McDonald's. Rerun the terminal and try again.
 1. After, you can ask any questions you'd like. Keep in mind, questions containing, 'burgers', 'nuggets' or 'fries' will be stored in appropriate lists, with others being generally stored in a separate section.
 1. You can ask any amount of questions, but please keep in mind that the AI has fees for me and usage has a capacity.
