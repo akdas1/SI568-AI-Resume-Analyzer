@@ -22,7 +22,7 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 ### Notes
 1. I originally referenced and sampled several generic resumes from BeamJobs to test the code. These were removed to avoid sharing. However, you can view the AI-generated / transformed sample outputs within the "sampleoutput.pdf" for both the applicant and employer scripts.
 1. Connecting to the AI may be computationally heavy and depend on your system, the API (calls and other third-party limits), and Wifi speeds. Please take a look at the "requirements.txt" for more info.
-1. Applicants can ask open-ended questions after getting their list of matching jobs. However, there is no limit on what type of questions you can ask, although the AI will learn from previous context in your questions, answers, and input resume. This essentially makes it a resume-focused "chatbot". Updated Note: AI has file uploads
+1. Applicants can ask open-ended questions after getting their list of matching jobs. However, there is no limit on what type of questions you can ask, although the AI will learn from previous context in your questions, answers, and input resume. This essentially makes it a resume-focused "chatbot". *Updated Note: AI has file uploads now, but this was still experimental*
 1. Employers are not currently able to ask open questions to the AI, but can consistently get resume summaries to assist in the hiring process.
 
 ## Data & Privacy
