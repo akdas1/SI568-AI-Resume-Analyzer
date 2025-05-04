@@ -1,5 +1,6 @@
 # What you need to know before starting:
 **This mini project was made for educational purposes for SI 568 at the University of Michigan School of Information.**
+
 *This repository and its code are intended solely as a demo to showcase academic work. You may download and run it locally. As this is an academic project and **not a product**, the code is provided without any warranty.*
 
 **You will need your own OpenAI API key**, which can be referenced on their site. You can input your key into the "yourkey.py" file (avoiding hard coding). You will also need to pip install PyPDF2 to access your PDF resumes. 
@@ -27,7 +28,7 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 
 ## Data & Privacy
 1. While this uses Generative AI, it is important to note that it can be inaccurate. This code was used experimentally to see how it may work in a business setting.
-1. Be cautious when submitting sensitive information to Generative AI resources. This code utilizes external APIs like OpenAI. While the code does not collect or store data, information sent to external services may be collected or used. You may refer to OpenAI's privacy policies to see what they collect here: [https://openai.com/policies/row-privacy-policy/]
+1. Be cautious when submitting sensitive information to Generative AI resources. This code utilizes external APIs like OpenAI. While the code does not collect or store data, information sent to external services may be collected or used. You may refer to OpenAI's privacy policies to see what they collect here: https://openai.com/policies/row-privacy-policy/
 
 ## References
-OpenAI. ChatGPT. 2023. OpenAI, [https://openai.com/blog/chatgpt.]
+OpenAI. ChatGPT. 2023. OpenAI, https://openai.com/blog/chatgpt.
