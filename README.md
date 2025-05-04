@@ -5,9 +5,8 @@
 
 **You will need your own OpenAI API key**, which can be referenced on their site. You can input your key into the "yourkey.py" file (avoiding hard coding). You will also need to pip install PyPDF2 to access your PDF resumes. 
 
-!! The function defaults to using PDFs for simplicity, although future adjustments to the if-elif-else statements referenced can bring in more file types.
-
-!! Please read the "requirements.txt" for the recommended system requirements to run. Note: they are based on my computer for testing.
+- The function defaults to using PDFs for simplicity, although future adjustments to the if-elif-else statements referenced can bring in more file types.
+- Please read the "requirements.txt" for the recommended system requirements to run. Note: they are based on my computer for testing.
 
 ## Overall Function
 I made the interface simple enough that when you run either script, users will be given directions on what to input or follow responses. Both scripts use while loops to cross-check inputs. It will let you run (or simply exit) until you get that step right! For example, both scripts ask for PDF inputs, and if the file doesn't exist, is misspelled, or isn't a PDF, the window will let you retry until a valid PDF resume is input. You can either exit the terminal window manually or by typing "exit."
