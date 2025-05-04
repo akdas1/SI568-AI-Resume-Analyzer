@@ -1,9 +1,10 @@
-Minimum System Requirements/ Recommendations
-Most requirements will be based on what I use
+Minimum System Requirements / Recommendations
+
+!! Most requirements will be based on what I use, but lower system use is up to the user's discretion
 
 Mac:
-MacOS Ventura
-CPU: Intel I5 or M1
+MacOS Ventura+
+CPU: Intel I5 or M1+
 Ram: 16GB
 
 Windows:
@@ -13,7 +14,7 @@ Ram: 16GB
 
 Wifi:
 Proper wifi is required to access AI modules
-Please update code to include your key for access
+Please update the code to include your key for access
 
 Python:
 Python Version 3.10.0 + preferred
