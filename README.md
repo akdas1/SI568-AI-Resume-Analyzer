@@ -30,4 +30,4 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 1. Be cautious when submitting sensitive information to Generative AI resources. This code utilizes external APIs like OpenAI. While the code does not collect or store data, information sent to external services may be collected or used. You may refer to OpenAI's privacy policies to see what they collect here: https://openai.com/policies/row-privacy-policy/
 
 ## References
-OpenAI. ChatGPT. 2023. OpenAI, https://openai.com/blog/chatgpt.
+OpenAI. (n.d.). OpenAI API. Retrieved March 2023, from https://openai.com/api/
