@@ -2,7 +2,7 @@
 
 ## Course
 SI 568 Applied Data Science  
-University of Michigan School of Information  
+University of Michigan, School of Information
 
 ## Author
 Amit Das
@@ -40,7 +40,7 @@ When you input an applicant's resume, the AI will give you a summary of the appl
   
 **For the employers.py**: I realized that though there is a file limit to PDF, the summarizer may still work if it has readable text within it, regardless of the content’s topic. This partially covers any issues if the file wasn’t a resume, since the responses would process and be non-resume-related summaries. I do not have a simple thought process on how to limit this as of yet, that doesn’t involve reading the file contents **until after it is read in.** However, an option is to use the AI to print out a simple response of judgment, similar to natural language processing and machine learning classifications. This concept is that after the file is accepted, the AI reads it, decides it is not a resume, and then exists via a chat response variable. If "yes", it would exit, Python would print out "Sorry. This file is not a resume. Please upload a **one-page PDF resume.**"
 
-For clarity, **the AI model is not what decides to quit.** It decides what classification the input file is, and based on that, the code preemptively responds. There currently isn’t a page limit in the PDF file reader function. If a user abuses the code by uploading irrelevant pages, inaccurate summaries will be produced. This is a flaw of the current project, but a way I thought about fixing this was to limit the page numbers submitted to one via if statements, which is the standard. This would solve the case of irrelevant pages, and the above AI decision making idea would solve instances where it is one page and not a resume. The same can be said if the page were blank.
+For clarity, **the AI model is not what decides to quit.** It decides what classification the input file is, and based on that, the code preemptively responds. There currently isn’t a page limit in the PDF file reader function. If a user abuses the code by uploading irrelevant pages, inaccurate summaries will be produced. This is a flaw of the current project, but a way I thought about fixing this was to limit the page numbers submitted to one via if statements, which is the standard. This would solve the case of irrelevant pages, and the above AI decision-making idea would solve instances where it is one page and not a resume. The same can be said if the page were blank.
 
 **for the applicants.py**:
 
