@@ -1,3 +1,13 @@
+# Mini Project: AI Resume Analyzer & Summarizer
+# Author: Amit Das
+# Course: SI 568 Applied Data Science
+# University of Michigan School of Information
+# Date: April 18, 2023
+# Revision Date: May 7, 2025
+
+# Description: Connects to OpenAI's API and lets applicants upload a resume file to 
+#              receive job suggestions, followed by optional conversational feedback.
+
 # Please pip install PyPDF2 before you start
 import openai
 import os
