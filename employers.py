@@ -85,6 +85,7 @@ def main():
     Returns:
         None
     '''
+    # initial set of questions
     filepath = input("Enter the applicant's resume filepath in pdf format: ")
     text = get_resume(filepath)
     history = []
@@ -95,6 +96,8 @@ def main():
     history.append({"role": "user", "content": question})
     history.append({"role": "assistant", "content": answer})
     while True:
+        # loop to continuously summarize inputs
+        # was needed for "next applicant" filepath, differentiating from the initial
         filepath = input("Enter the next applicant's resume or exit: ")
         text = get_resume(filepath)
         question = f"Here is a resume: \n{text} Can you summarize it for me?"
