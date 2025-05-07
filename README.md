@@ -5,7 +5,7 @@ SI 568 Applied Data Science
 University of Michigan School of Information  
 
 ## Author
-Amit Das 
+**Amit Das**
 Original Date: April 18, 2023  
 **Revision Date: May 7, 2025**
 
