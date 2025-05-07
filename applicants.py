@@ -5,8 +5,9 @@
 # Date: April 18, 2023
 # Revision Date: May 7, 2025
 
-# Description: Connects to OpenAI's API and lets applicants upload a resume file to 
-#              receive job suggestions, followed by optional conversational feedback.
+# Description: Connects to OpenAI's API and lets users upload a resume file to 
+#              receive job suggestions, followed by optional conversational 
+#              feedback until they exit.
 
 # Please pip install PyPDF2 before you start
 import openai
