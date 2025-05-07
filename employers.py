@@ -1,3 +1,6 @@
+# Author 
+
+
 # Please pip install PyPDF2 before you start
 import openai
 import os
