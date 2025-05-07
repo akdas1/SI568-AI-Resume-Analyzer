@@ -17,7 +17,7 @@ Original Date: April 18, 2023
 *This repository and its code are intended solely as a demo to showcase academic work. You may download and run it locally. As this is an academic project and **not a product**, the code is provided without any warranty.*
 
 ## Install Dependencies 
-**You will need your own OpenAI API key**, which can be referenced on their site. You can input your key into the "yourkey.py" file (avoiding hard coding for security). It's not recommended to share your key publicly or with others.
+**You will need your own OpenAI API key**, which can be referenced on their [site](https://openai.com/api/). You can input your key into the "**yourkey.py**" file (avoiding hard coding for security). It's not recommended to share your key publicly or with others.
 
 **Library Dependencies can be installed via:**
 pip install -r requirements.txt
