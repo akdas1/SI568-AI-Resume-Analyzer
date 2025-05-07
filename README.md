@@ -6,8 +6,7 @@ University of Michigan School of Information
 
 ## Author
 **Amit Das**
-
-Original Date: April 18, 2023  
+**Original Date: April 18, 2023**
 **Revision Date: May 7, 2025**
 
 ## What you need to know before starting:
