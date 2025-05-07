@@ -6,7 +6,7 @@ from PyPDF2 import PdfReader
 openai.api_key = key # go to yourkey.py and enter your key
 
 ## we are just choosing pdf format
-model_engine = "text-davinci-002"
+model_engine = "gpt-3.5-turbo" # changed from text-davinci-002 due to depreciation
 
 def get_resume(filepath):
     '''
