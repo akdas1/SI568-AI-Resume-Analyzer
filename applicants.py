@@ -33,22 +33,32 @@ def get_resume(filepath):
             extracted text from the resume
     '''
     while True:
+        ## checks the exit condition
+        ## users can choose to exit at any point in this loop
+        if filepath.lower() == 'exit':
+            print("Goodbye!")
+            quit() # quits the code
         ## check if the file exists
-        if os.path.isfile(filepath) == True:
-            ## check if the file is a PDF
-            if filepath.endswith('.pdf'):
-                reader = PdfReader(filepath)
-                resume = reader.pages[0].extract_text()
-            ## user can choose to exit at any point in this loop
-            elif filepath.lower() == 'exit':
-                    print('Goodbye!')
-                    quit()
-            else: ## if the file is not a PDF
-                filepath = input('Enter your file as a pdf: ')
+        if not os.path.isfile(filepath):
+            print("That file does not exist.")
+        ## checks if the file is a PDF or not
+        elif not filepath.endswith('.pdf'):
+            print("This is not a PDF file.")
+        # if the PDF does exist:
         else:
-            filepath = input('Enter a valid pdf file path: ')
-            continue
-        return resume
+            try:
+                ## reads in the PDF file
+                reader = PdfReader(filepath)
+                ## filters to the first page for resumes
+                resume = reader.pages[0].extract_text()
+                if not resume or resume.strip() == "":
+                    print("File is empty.")
+                else:
+                    return resume  # returns immediately once a valid PDF exists
+            except Exception as e: # corrupt file error or unreadable
+                print(f"Error reading the PDF: {e}")
+        # asks the user to input a new file path for the above reasons
+        filepath = input('Enter a valid PDF file path or type "exit" to quit: ')
 
 def ask_question(question, history):
     '''
