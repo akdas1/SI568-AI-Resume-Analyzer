@@ -21,7 +21,7 @@ filepath = input('Enter the file path of your resume in pdf format: ')
 
 def get_resume(filepath):
     '''
-    Takes in a filepath and returns the text of the resume
+    Takes in a filepath and returns the text of the resume.
 
     Parameters:
     -----------
