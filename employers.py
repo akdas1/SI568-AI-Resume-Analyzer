@@ -42,27 +42,24 @@ def get_resume(filepath):
                 reader = PdfReader(filepath)
                 resume = reader.pages[0].extract_text()
             else: ## if the file is not a PDF
-                filepath = input('Enter the file as a pdf: ')
+                filepath = input('Enter the file as a PDF: ')
         ## users can choose to exit at any point in this loop
         elif filepath.lower() == 'exit':
                     print('Goodbye!')
                     quit()
         else:
-            filepath = input('Enter a valid pdf file path: ')
+            filepath = input('Enter a valid PDF file path: ')
             continue
         return resume
 
-def ask_question(question, history):
+def ask_question(question):
     '''
     Takes in a question and retrieves an answer from the AI.
-    Stores the question, answer, and previous history.
 
     Parameters:
     -----------
     question: str
         input question from the user
-    history: list
-        list of previous questions and answers
 
     Returns:
         answer: str
@@ -76,7 +73,7 @@ def ask_question(question, history):
     # stores question, answer, and history
     response = openai.ChatCompletion.create(
         model = "gpt-3.5-turbo",
-        messages = history + [{"role": "user", "content": question}])
+        messages = [{"role": "user", "content": question}])
 
     # gets the response from the AI
     answer = response['choices'][0]['message']['content']
@@ -84,9 +81,13 @@ def ask_question(question, history):
 
 def main():
     '''
-    Runs the program, then stores questions and answers.
-    Initially returns some summary based on the
-    resume. Then, gave the option to input additional.
+    Runs the program, then returns questions and answers.
+    Summarizes input resume by calling the get_resume
+    function, and connects to the model via the 
+    ask_question function. It will repeat the process 
+    each time for the remaining applicants until the user 
+    exits. The user can also exit at any point 
+    by typing "exit".
 
     Parameters:
     -----------
@@ -95,27 +96,18 @@ def main():
     Returns:
         None
     '''
-    # initial set of questions
-    filepath = input("Enter the applicant's resume filepath in pdf format: ")
-    text = get_resume(filepath)
-    history = []
-    question = f"Here is a resume: \n{text} Can you summarize it for me?"
-    answer = ask_question(question, history)
-    print(answer) # prints the initial response
-    ## stores question and responses
-    history.append({"role": "user", "content": question})
-    history.append({"role": "assistant", "content": answer})
+    ## question and responses
     while True:
         # loop to continuously summarize inputs
-        # was needed for "next applicant" filepath, differentiating from the initial
-        filepath = input("Enter the next applicant's resume or exit: ")
+        filepath = input("Enter the applicant's resume filepath in PDF format: ")
+        ## users can exit during this continuous loop
+        if 'exit' in filepath.lower():
+            print("Goodbye!")
+            break
         text = get_resume(filepath)
         question = f"Here is a resume: \n{text} Can you summarize it for me?"
-        answer = ask_question(question, history)
-        print(answer) # prints the initial response
-        ## stores question and responses
-        history.append({"role": "user", "content": question})
-        history.append({"role": "assistant", "content": answer})
+        answer = ask_question(question)
+        print(answer) # prints the response
         continue
 if __name__ == "__main__":
     main()
