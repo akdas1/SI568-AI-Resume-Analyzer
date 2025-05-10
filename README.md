@@ -40,9 +40,9 @@ Though both scripts limit the input files to one-page PDFs, the summarizer may s
 
 One theoretical way to handle non-resume inputs safely could involve searching for specific resume terms like “education”, “work experience”, “skills”, and/or “projects” after a valid PDF is uploaded, but before it’s returned and processed by the AI. The code then validates the content by parsing through the extracted text, and prompts the user to upload a new resume file if the text doesn't match most of the common resume terms.
 
-**May 4, 2025 Revision: fixed nested while loops**
+**May 4, 2025 Revision: fixed nested while loops and history in employer script**
 
-Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question.
+Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question. Also removed history from the employer scripts since no additional questions were being asked for those particular resumes. The code looped for the next file after summarizing the current file, which makes storing history unnecessary. However, this was used previously for chat transcripts and exporting when exiting.
 
 **May 9, 2025 Revision: fixed blank and corrupted inputs**
 
