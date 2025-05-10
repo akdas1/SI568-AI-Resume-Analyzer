@@ -36,21 +36,20 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 ## Considerations & Optimizations:
 > The function defaults to using PDFs for simplicity, although future adjustments to the if-elif-else statements referenced can bring in more file types.
 
-Though both scripts limit the input files to one-page PDFs, the summarizer may still work if it has readable text within it, regardless of the content’s topic. Results could vary depending on the questions, file contents, and model used, if modified. It may be important to limit this to content-based resumes, in case there are areas for computational abuse.
+Though both scripts limit the input files to one-page PDFs, the summarizer may still work if it has readable text, regardless of the content’s topic. Results could vary depending on the questions, file contents, and model used, if modified. It may be important to limit this to content-based resumes, in case there are areas for computational abuse.
 
 One theoretical way to handle non-resume inputs safely could involve searching for specific resume terms like “education”, “work experience”, “skills”, and/or “projects” after a valid PDF is uploaded, but before it’s returned and processed by the AI. The code then validates the content by parsing through the extracted text, and prompts the user to upload a new resume file if the text doesn't match most of the common resume terms.
 
 **May 4, 2025 Revision: fixed nested while loops**
 
-Corrected a redundant while loop in the question receiver functions, since it was not needed. The main function’s while loop included the question.
+Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question.
 
 **May 9, 2025 Revision: fixed blank and corrupted inputs**
 
-One thing I have revised was the addition of a blank page filter in the file uploading steps. After the input file is extracted, the code will check if the text string is empty. It also strips empty white spaces just in case. If the PDF file does not work, I revised the validated PDF path file to run in a try/ except statement. Similarly, whether the file is corrupted or blank, the user will be able to upload another file or exit.
+One thing I have revised was the addition of a blank page filter in the file uploading steps. After the input file is extracted, the code will check if the text string is empty. It also strips empty white spaces just in case. If the PDF file does not work, I revised the validated PDF path file to run in a try/ except statement. Similarly, whether the file is corrupted or blank, the user can upload another file or exit.
 
 ### Notes
 1. I originally referenced and sampled several generic resumes from **BeamJobs** to test code. These were removed to avoid sharing. However, you can view the AI-generated / transformed sample outputs within the "sampleoutput.pdf" for both the applicant and employer scripts.
-1. Connecting to the AI may be computationally heavy and depend on your system, the API (calls and other third-party limits), and Wifi speeds. Please take a look at the "requirements.txt" for more info.
 1. Applicants can ask open-ended questions after getting their list of matching jobs. However, there is no limit on what type of questions you can ask, although the AI will learn from previous context in your questions, answers, and input resume. This essentially makes it a resume-focused "chatbot". *Updated Note: AI has file uploads now, but this was still experimental.*
 1. Employers are not currently able to ask open questions to the AI, but can consistently get resume summaries to assist in the hiring process.
 
