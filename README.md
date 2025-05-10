@@ -41,9 +41,11 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 One theoretical way to handle non-resume inputs safely could involve searching for specific resume terms like “education”, “work experience”, “skills”, and/or “projects” after a valid PDF is uploaded, but before it’s returned and processed by the AI. The code then validates the content by parsing through the extracted text, and prompts the user to upload a new resume file if the text doesn't match most of the common resume terms.
 
 **May 4, 2025 Revision: fixed nested while loops**
+
 Corrected a redundant while loop in the question receiver functions, since it was not needed. The main function’s while loop included the question.
 
 **May 9, 2025 Revision: fixed blank and corrupted inputs**
+
 One thing I have revised was the addition of a blank page filter in the file uploading steps. After the input file is extracted, the code will check if the text string is empty. It also strips empty white spaces just in case. If the PDF file does not work, I revised the validated PDF path file to run in a try/ except statement. Similarly, whether the file is corrupted or blank, the user will be able to upload another file or exit.
 
 ### Notes
