@@ -36,7 +36,7 @@ When you input an applicant's resume, the AI will give you a summary of the appl
 ## Considerations & Optimizations:
 > The function defaults to using PDFs for simplicity, although future adjustments to the if-elif-else statements referenced can bring in more file types.
 
-**For both scripts**: Though both scripts limit the input files to one-page PDFs, the summarizer may still work if it has readable text within it, regardless of the content’s topic. Results could vary depending on the questions, file contents, and model used, if modified. It may be important to limit this to content-based resumes, in case there are areas for computational abuse.
+Though both scripts limit the input files to one-page PDFs, the summarizer may still work if it has readable text within it, regardless of the content’s topic. Results could vary depending on the questions, file contents, and model used, if modified. It may be important to limit this to content-based resumes, in case there are areas for computational abuse.
 
 One theoretical way to handle non-resume inputs safely could involve searching for specific resume terms like “education”, “work experience”, “skills”, and/or “projects” after a valid PDF is uploaded, but before it’s returned and processed by the AI. The code then validates the content by parsing through the extracted text, and prompts the user to upload a new resume file if the text doesn't match most of the common resume terms.
 
