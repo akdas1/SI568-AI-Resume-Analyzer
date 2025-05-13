@@ -2,6 +2,7 @@
 
 ## Course
 SI 568 Applied Data Science  
+
 University of Michigan, School of Information
 
 ## Author
@@ -12,7 +13,18 @@ Original Date: April 18, 2023
 **Revision Date**: May 10, 2025 
 
 ## Description:
-**This mini project was made for educational purposes for SI 568 at the University of Michigan School of Information.**
+**This mini project was made for educational purposes for SI 568 at the University of Michigan School of Information.** The goal of the project was to experiment with and create an AI tool to potentially solve a real-world business problem, with my focus being on the job market, Though it was a shorter project, I intended to experiment with AI on both sides of the job market and how it could assist or improve the application process for both hiring managers and applicants.
+
+### Table of Contents
+- [Install Dependencies](#install-dependencies)
+- [Overall Function](#overall-function)
+  - [Applicant Script Process](#applicant-script-process)
+  - [Employer Script Process](#employer-script-process)
+- [Considerations & Optimizations](#considerations--optimizations)
+- [Notes](#notes)
+- [Data & Privacy](#data--privacy)
+- [License & Usage](#license--usage)
+- [Acknowledgements](#acknowledgements)
 
 ## Install Dependencies 
 **You will need your own OpenAI API key**, which can be referenced on their [site](https://openai.com/api/). You can input your key into the "**yourkey.py**" file (avoiding hard coding for security). It's not recommended to share your key publicly or with others.
@@ -27,26 +39,30 @@ I created a simple interface so that when you run either script, you will be giv
 
 Detailed instructions for both types of users are below:
 
-## What applicants may need to know:
+### Applicant Script Process:
 When you input your resume, the AI will give you a list of jobs that match your skill set. You can also ask additional follow-up questions or exit at any point just by typing 'exit'. You may also quit the terminal. The intent was to experiment with how AI can help with the application process and preparation, especially with resume uploading directly within Python for context. 
 
-## What employers may need to know:
+### Employer Script Process:
 When you input an applicant's resume, the AI will give you a summary of the applicant's resume. You can then input other applicants' resumes to get additional resume summaries. You can also exit at any point just by typing 'exit'. The intent was to experiment with speed and how AI can help with hiring strategies.
 
-## Considerations & Optimizations:
+## Considerations & Optimizations
 > The function defaults to using PDFs for simplicity, although future adjustments to the if-elif-else statements referenced can bring in more file types.
 
 Though both scripts limit the input files to one-page PDFs, the summarizer may still work if it has readable text, regardless of the content’s topic. Results could vary depending on the questions, file contents, and model used, if modified. It may be important to limit this to content-based resumes, in case there are areas for computational abuse.
 
 One theoretical way to handle non-resume inputs safely could involve searching for specific resume terms like “education”, “work experience”, “skills”, and/or “projects” after a valid PDF is uploaded, but before it’s returned and processed by the AI. The code then validates the content by parsing through the extracted text, and prompts the user to upload a new resume file if the text doesn't match most of the common resume terms.
 
-**May 4, 2025 Revision: fixed nested while loops and history in employer script**
+**May 4, 2025 Revision:** 
 
-Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question. Also removed history from the employer scripts since no additional questions were being asked for those particular resumes. The code looped for the next file after summarizing the current file, which makes storing history unnecessary. However, this was used previously for chat transcripts and exporting when exiting.
+*Fixed nested while loops and history in the employer script*
 
-**May 9, 2025 Revision: fixed blank and corrupted inputs**
+> Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question. Also removed history from the employer scripts since no additional questions were being asked for those particular resumes. The code looped for the next file after summarizing the current file, which makes storing history unnecessary. However, this was used previously for chat transcripts and exporting when exiting.
 
-One thing I have revised was the addition of a blank page filter in the file uploading steps. After the input file is extracted, the code will check if the text string is empty. It also strips empty white spaces just in case. If the PDF file does not work, I revised the validated PDF path file to run in a try/ except statement. Similarly, whether the file is corrupted or blank, the user can upload another file or exit.
+**May 9, 2025 Revision:**
+
+*Fixed blank and corrupted inputs*
+
+> One thing I have revised was the addition of a blank page filter in the file uploading steps. After the input file is extracted, the code will check if the text string is empty. It also strips empty white spaces just in case. If the PDF file does not work, I revised the validated PDF path file to run in a try/ except statement. Similarly, whether the file is corrupted or blank, the user can upload another file or exit.
 
 ### Notes
 1. I originally referenced and sampled several generic resumes from **BeamJobs** to test code. These were removed to avoid sharing. However, you can view the AI-generated / transformed sample outputs within the "sampleoutput.pdf" for both the applicant and employer scripts.
@@ -67,8 +83,9 @@ You may explore, modify, and run the project locally for personal or non-commerc
 
 This project uses **OpenAI's API** and publicly available resume templates from **BeamJobs** to test whether my code's AI-generated feedback and resume summaries were accurate. The templates were used only for academic, educational, non-commercial, and testing purposes. They have since been removed from this repository.
 
-OpenAI's API was used for
-[OpenAI API](https://openai.com/api/)
+[OpenAI's API](https://openai.com/api/) was used for retrieving AI-generated responses based on the parameters the project set.
+
+The [PyPDF2](https://pypdf2.readthedocs.io/en/3.x/) library was used for PDF file reading and text extraction.
 
 Resume templates used for testing were sourced from the following BeamJobs pages. In each case, I used the *first downloadable template on each page* (unless updated):
 
