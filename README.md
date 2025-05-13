@@ -56,7 +56,7 @@ One theoretical way to handle non-resume inputs safely could involve searching f
 
 *Fixed nested while loops and history in the employer script*
 
-> Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question. Also removed history from the employer scripts since no additional questions were being asked for those particular resumes. The code looped for the next file after summarizing the current file, which makes storing history unnecessary. However, this was used previously for chat transcripts and exporting when exiting.
+> Corrected a redundant while loop in the question receiver functions, since it wasn't needed. The main function’s while loop included the question. Also, I removed history from the employer scripts since no additional questions were being asked for those particular resumes. The code looped for the next file after summarizing the current file, which makes storing history unnecessary. However, this was used previously for chat transcripts and exporting when exiting.
 
 **May 9, 2025 Revision:**
 
@@ -83,13 +83,17 @@ You may explore, modify, and run the project locally for personal or non-commerc
 
 This project uses **OpenAI's API** and publicly available resume templates from **BeamJobs** to test whether my code's AI-generated feedback and resume summaries were accurate. The templates were used only for academic, educational, non-commercial, and testing purposes. They have since been removed from this repository.
 
-[OpenAI's API](https://openai.com/api/) was used for retrieving AI-generated responses based on the parameters the project set.
+[OpenAI's API](https://openai.com/api/) was used to retrieve AI-generated responses based on the project parameters.
 
 The [PyPDF2](https://pypdf2.readthedocs.io/en/3.x/) library was used for PDF file reading and text extraction.
 
 Resume templates used for testing were sourced from the following BeamJobs pages. In each case, I used the *first downloadable template on each page* (unless updated):
 
 - [Sample 1: 9 Data Scientist Resume Examples for 2023](https://www.beamjobs.com/resumes/data-science-resume-example-guide)
+- [Sample 2: 5 Business Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/business-resume-examples)
+- [Sample 3: 7 Attorney Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/attorney-resume-examples)
+- [Sample 4: 11 Data Analyst Resume Examples for 2023](https://www.beamjobs.com/resumes/data-analyst-resume-examples#writing-your-data-analyst-resume)
+- [Sample 5: 5 Dentist Resume Examples Guaranteed to Work in 2023](https://www.beamjobs.com/resumes/dentist-resume-examples)
 - [Sample 2: 5 Business Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/business-resume-examples)
 - [Sample 3: 7 Attorney Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/attorney-resume-examples)
 - [Sample 4: 11 Data Analyst Resume Examples for 2023](https://www.beamjobs.com/resumes/data-analyst-resume-examples#writing-your-data-analyst-resume)
