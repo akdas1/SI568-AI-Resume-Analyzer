@@ -109,10 +109,6 @@ def main():
     while True:
         # loop to continuously summarize inputs
         filepath = input("Enter the applicant's resume filepath in PDF format: ")
-        ## users can exit during this continuous loop
-        if 'exit' in filepath.lower():
-            print("Goodbye!")
-            break
         text = get_resume(filepath)
         question = f"Here is a resume: \n{text} Can you summarize it for me?"
         answer = ask_question(question)
