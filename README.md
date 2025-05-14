@@ -12,7 +12,7 @@ Original Date: April 18, 2023
 
 **Revision Date**: May 14, 2025 
 
-## Description:
+## Description
 **This mini project was made for educational purposes for SI 568 at the University of Michigan School of Information.** The goal of the project was to experiment with and create an AI tool to potentially solve a real-world business problem, with my focus being on the job market, Though it was a shorter project, I intended to experiment with AI on both sides of the job market and how it could assist or improve the application process for both hiring managers and applicants.
 
 ### Table of Contents
@@ -39,10 +39,10 @@ I created a simple interface so that when you run either script, you will be giv
 
 Detailed instructions for both types of users are below:
 
-### Applicant Script Process:
+### Applicant Script Process
 When you input your resume, the AI will give you a list of jobs that match your skill set. You can also ask additional follow-up questions or exit at any point just by typing 'exit'. You may also quit the terminal. The intent was to experiment with how AI can help with the application process and preparation, especially with resume uploading directly within Python for context. 
 
-### Employer Script Process:
+### Employer Script Process
 When you input an applicant's resume, the AI will give you a summary of the applicant's resume. You can then input other applicants' resumes to get additional resume summaries. You can also exit at any point just by typing 'exit'. The intent was to experiment with speed and how AI can help with hiring strategies.
 
 ## Considerations & Optimizations
