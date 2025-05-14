@@ -94,7 +94,3 @@ Resume templates used for testing were sourced from the following BeamJobs pages
 - [Sample 3: 7 Attorney Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/attorney-resume-examples)
 - [Sample 4: 11 Data Analyst Resume Examples for 2023](https://www.beamjobs.com/resumes/data-analyst-resume-examples#writing-your-data-analyst-resume)
 - [Sample 5: 5 Dentist Resume Examples Guaranteed to Work in 2023](https://www.beamjobs.com/resumes/dentist-resume-examples)
-- [Sample 2: 5 Business Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/business-resume-examples)
-- [Sample 3: 7 Attorney Resume Examples That Got the Job in 2023](https://www.beamjobs.com/resumes/attorney-resume-examples)
-- [Sample 4: 11 Data Analyst Resume Examples for 2023](https://www.beamjobs.com/resumes/data-analyst-resume-examples#writing-your-data-analyst-resume)
-- [Sample 5: 5 Dentist Resume Examples Guaranteed to Work in 2023](https://www.beamjobs.com/resumes/dentist-resume-examples)
