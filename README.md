@@ -10,7 +10,7 @@ Amit Das
 
 Original Date: April 18, 2023 
 
-**Revision Date**: May 10, 2025 
+**Revision Date**: May 14, 2025 
 
 ## Description:
 **This mini project was made for educational purposes for SI 568 at the University of Michigan School of Information.** The goal of the project was to experiment with and create an AI tool to potentially solve a real-world business problem, with my focus being on the job market, Though it was a shorter project, I intended to experiment with AI on both sides of the job market and how it could assist or improve the application process for both hiring managers and applicants.
@@ -85,7 +85,7 @@ This project uses **OpenAI's API** and publicly available resume templates from 
 
 [OpenAI's API](https://openai.com/api/) was used to retrieve AI-generated responses based on the project parameters.
 
-The [PyPDF2](https://pypdf2.readthedocs.io/en/3.x/) library was used for PDF file reading and text extraction.
+The [PyPDF2](https://pypi.org/project/PyPDF2/) library was used for PDF file reading and text extraction.
 
 Resume templates used for testing were sourced from the following BeamJobs pages. In each case, I used the *first downloadable template on each page* (unless updated):
 
